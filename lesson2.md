@@ -1,44 +1,5 @@
 # Lesson 2 questions
 
-* Can we always use a random sample for a validation set? Why or why not?
-  * Yes we can split the data randomly into validation and training sets
-  * Once we have this split the training and validation sets should stay the same.
-  
-* What is overfitting? Provide an example.
-  * If you train your data for too long, with not enough data and possibly with too many parameters the performance of the model may degragde.
-  
-* What is a metric? How does it differ from "loss"?
-  * Metric is a mesure of how well the model is doing against a model for human consumption
-  * Loss is  how good a model is and used by the algorithm to train itself
-
-* How can pretrained models help?
-  * A model that has already been trained. The model will be fine tuned.
-
-* What is the "head" of a model?
-  * The last part of the model is called the head. It is the last layer of the cnn
-
-* `What kinds of features do the early layers of a CNN find? How about the later layers?`
-  
-* Are image models only useful for photos?
-  * No, along with photos they have also shown demonstration of use in the area of virus identification.
-
-* What is an "architecture"?
-  * The template of the model.
-
-* What is segmentation?
-  * A model that can recognise the content of every individual pixel in an image.
-
-* What is y_range used for? When do we need it?
-  * Its the range of the target.
-
-* What are "hyperparameters"?
-  * They are parameters about parameteres.
-
-* What's the best way to avoid failures when using AI in an organization?
-  * Using manual process to keep check on the AI.
-  * Human supervised deployment models.
-  * Gradual expansion
-
 * What is a p value?
   * p value is a threshold which 
 
@@ -91,3 +52,56 @@
   
 * How do we ensure a random split always gives the same validation set?
   * By passing a number to the `seed` parmeter in the `splitter` function.
+
+* What letters are often used to signify the independent and dependent variables?
+  * `x` --> independent variable
+  * `y` --> dependent variable
+
+* What's the difference between the crop, pad, and squish resize approaches? When might you choose one over the others?
+  * `crop` --> removal of features.
+  * `pad` --> Filling empty space in image while resizing with 0.
+  * `squish` --> changes the shape of the picture
+  * Each resizing technique has its own problem. One option would randomly crop a part of the image at each epoch.
+  * I will probably choose randomResizedCrop. 
+
+* What is data augmentation? Why is it needed?
+  * Augmentation - creating random variations of data so that they appear different but do change the meaning of the data.
+  * Is a way to create new data when there is not enough variation in the input data.
+
+* What is the difference between item_tfms and batch_tfms?
+  * `item_tfms` - runs transformation on each individual item.
+  * `batch_tfms` - runs transforms on batch on GPU. Happens to a batch a time and is much faster.
+
+* What is a confusion matrix?
+  * Is a matrix where the daigoal boxes represent the correct classification by the model and the off diagoal represent incorrect classification.
+
+* What does export save?
+  * Saves the model (combination of architecture and parmeters)
+
+* What is it called when we use a model for getting predictions, instead of training?
+* What are IPython widgets?
+  * They are GUI components that bring js to python in web browser.
+
+* When might you want to use CPU for deployment? When might GPU be better?
+  * When doing heavy batch processing with user input GPU is better.
+  * When dealing with 1 user input at a time CPU is better.
+
+* What are the downsides of deploying your app to a server, instead of to a client (or edge) device such as a phone or PC?
+  * Latency
+  * Sensitive data transmission over the internet.
+  
+* What are three examples of problems that could occur when rolling out a bear warning system in practice?
+  * Angles of the photo.
+  * Not enough light.
+  * Moving image will capture bear at different angles and the system may not recognise it.
+
+* What is "out-of-domain data"?
+  * Data in production very different from the data the model was trained on.
+
+* What is "domain shift"?
+  * Data in production changes over time.
+
+* What are the three steps in the deployment process?
+  * Manual process.
+  * Limited scope deployment.
+  * Gradual expansion.

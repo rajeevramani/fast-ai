@@ -74,3 +74,42 @@
 
 * What will fastai do if you don't provide a validation set?
   * Will create a validation set.
+  
+* Can we always use a random sample for a validation set? Why or why not?
+  * Yes we can split the data randomly into validation and training sets
+  * Once we have this split the training and validation sets should stay the same.
+  
+* What is overfitting? Provide an example.
+  * If you train your data for too long, with not enough data and possibly with too many parameters the performance of the model may degragde.
+  
+* What is a metric? How does it differ from "loss"?
+  * Metric is a mesure of how well the model is doing against a model for human consumption
+  * Loss is  how good a model is and used by the algorithm to train itself
+
+* How can pretrained models help?
+  * A model that has already been trained. The model will be fine tuned.
+
+* What is the "head" of a model?
+  * The last part of the model is called the head. It is the last layer of the cnn
+
+* `What kinds of features do the early layers of a CNN find? How about the later layers?`
+  
+* Are image models only useful for photos?
+  * No, along with photos they have also shown demonstration of use in the area of virus identification.
+
+* What is an "architecture"?
+  * The template of the model.
+
+* What is segmentation?
+  * A model that can recognise the content of every individual pixel in an image.
+
+* What is y_range used for? When do we need it?
+  * Its the range of the target.
+
+* What are "hyperparameters"?
+  * They are parameters about parameteres.
+
+* What's the best way to avoid failures when using AI in an organization?
+  * Using manual process to keep check on the AI.
+  * Human supervised deployment models.
+  * Gradual expansion
