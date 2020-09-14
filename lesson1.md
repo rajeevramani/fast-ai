@@ -1,4 +1,4 @@
-## Lesson 1 questions
+# Lesson 1 questions
 
 * Do you need these for deep learning?
   * Lots of math `F`
